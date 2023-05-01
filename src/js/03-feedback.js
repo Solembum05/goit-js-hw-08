@@ -7,8 +7,8 @@ form.addEventListener('submit', onFormSubmit);
 
 function onFormInput(e) {
   const feedbackObj = {
-    email: e.currentTarget.elements.email.value,
-    message: e.currentTarget.elements.message.value,
+    email: form.email.value,
+    message: form.message.value,
   };
   localStorage.setItem('feedback-form-state', JSON.stringify(feedbackObj));
   loadForm('feedback-form-state');
